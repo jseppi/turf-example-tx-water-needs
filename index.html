@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Texas Water Shortages | turf-example</title>
+
+  <script src='//api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/normalize/3.0.2/normalize.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/skeleton/2.0.4/css/skeleton.css">
+
+  <style>
+    .map-container {
+      height: 400px;
+    }
+  </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="four columns map-container" id="map2010">
+          four
+        </div>
+        <div class="four columns map-container" id="map2020">
+          four
+        </div>
+        <div class="four columns map-container" id="map2030">
+          four
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      // -106.65,25.84,-93.51,36.5
+      // http://texasstatewaterplan.org/api/v1/needs/type/municipal
+
+      var mapIds = ['map2010', 'map2020', 'map2030'];
+
+      var map = L.mapbox.map('map2010');
+
+    </script>
+  </body>
+</html>
