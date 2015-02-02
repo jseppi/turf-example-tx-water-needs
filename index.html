@@ -172,7 +172,8 @@
           var lyr = L.geoJson(counties, {
             style: function (f) {
               var val = f.properties['NPD' + year];
-              
+              var fillColor;
+
               for (var j = breaksForYear.length - 1; j >= 0; j--) {
                 var breakVal = breaksForYear[j];
                 if (val >= breakVal) {
@@ -185,7 +186,7 @@
                 weight: 1,
                 color: '#fff',
                 fillColor: fillColor,
-                fillOpacity: val == 0 ? 0 : 0.9
+                fillOpacity: val === 0 ? 0 : 0.9
               };
             },
             onEachFeature: function (f, l) {
