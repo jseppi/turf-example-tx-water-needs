@@ -118,12 +118,12 @@
 
         var jenksBreaks = _.map(years, function (year) {
           // return turf.jenks(counties, 'NPD' + year, 4);
-          return turf.jenks(counties, 'NPD2010', 4);
+          return turf.jenks(counties, 'NPD' + year', 4);
         });
 
         var quantileBreaks = _.map(years, function (year) {
           // return turf.quantile(counties, 'NPD' + year, [10, 25, 50, 75, 90]);
-          return turf.quantile(counties, 'NPD2010', [10, 25, 50, 75, 90]);
+          return turf.quantile(counties, 'NPD' + year, [10, 25, 50, 75, 90]);
         });
 
         var jenksLayers = makeLayers(counties, jenksBreaks);
