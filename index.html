@@ -136,7 +136,7 @@
         var quantileLayers = makeLayers(counties, quantileBreaks);
         var simpleBreaksLayers = makeLayers(counties, simpleBreaks);
 
-        //start off on jenks
+        //start off on quantiles
         showLayers(maps, quantileLayers);
 
         $('input[name=classification]:radio').change(function () {
